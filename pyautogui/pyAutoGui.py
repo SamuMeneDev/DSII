@@ -32,8 +32,18 @@ print(pyautogui.size())
 # 6. Print da tela
 img = pyautogui.screenshot()
 
-# 7.  ...
+# 7.
+pyautogui.press("winleft")
+pyautogui.write("chrome")
+pyautogui.press("enter")
+sleep(3)
+pyautogui.write("terra.com.br ")
+pyautogui.press("enter")
+sleep(3)
+pyautogui.moveTo(1595, 25)
 
+pyautogui.screenshot("imagemEncontrada.png")
+pyautogui.alert(title="Imagem", text=f"Imagem na posição X={1595}|Y={25}")
 
 # 8.
 pyautogui.alert(title="Aviso", text="Conexão bem-sucedida")
